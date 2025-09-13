@@ -384,6 +384,67 @@ export default function Page() {
         <div className="w-1/2 font-semibold text-4xl text-center my-20">
           Program Fee and Scholarship
         </div>
+
+        <div className="w-6/10  flex items-center justify-center px-10 py-5 rounded-4xl bg-[#2DF8C5] ">
+          <div className="bg-gray-50 basis-1/3 flex flex-col gap-3 items-start justify-center  rounded-3xl p-16">
+            <div className="bg-amber-200 py-1 px-2 rounded-lg font-semibold">
+              Only for
+            </div>
+            <div className="">
+              <span className="font-bold text-3xl">639</span>
+              <span className="text-[#24b490] font-semibold">/month</span>
+              <div className="text-sm text-[#24b490]">(for 6 months)</div>
+            </div>
+            <div>*before scholarship</div>
+          </div>
+          <div className="px-10 py-5 basis-2/3">
+            <div className="p-2">
+              <div className="font-bold">Absolutely Free Demo Class</div>
+              <div className="">No fees required</div>
+            </div>
+            <div className="p-2">
+              <div className="font-bold">Guaranteed Scholarship</div>
+              <div>After the demo class</div>
+            </div>
+            <div className="p-2">
+              <div className="font-bold">
+                Placement Jogyotar Tarikhe placement pele
+              </div>
+              <div>Sudhumatro sofolotar fee porisodh korun </div>
+            </div>
+            <div className="p-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              incidunt consequuntur impedit dolor hic officia mollitia quae
+              eligendi perferendis sequi, illum ducimus magnam obcaecati vero
+              facere, iusto odit quisquam voluptates.
+            </div>
+          </div>
+        </div>
+        <button className="w- rounded-lg bg-amber-300 hover:bg-amber-400 font-bold text-xl py-5 px-10 hover:cursor-pointer mt-10">
+          Try our free demo class
+        </button>
+
+        <div className="font-bold text-3xl text-center my-10">
+          ১০,০০০+ ডিজাইন উৎসাহীদের সম্প্রদায়ে যোগ দিন
+        </div>
+        <div className="w-6/10 text-center text-lg">
+          <span className="font-bold">সংযোগ করুন, শিখুন এবং বিকশিত হন</span>{' '}
+          একটি প্রাণবন্ত সম্প্রদায়ের সঙ্গে, যেখানে UI/UX ডিজাইনার ও শিল্প
+          পেশাদাররা আমাদের বিস্তৃত প্রশিক্ষণের মাধ্যমে তাদের ক্যারিয়ার
+          রূপান্তরিত করেছেন।
+        </div>
+        <div className="rounded-3xl w-6/10 mt-10 bg-[#2DF8C5] p-10 text-4xl text-center font-bold">
+          Gain the privilage of top UI/UX design experise and achieve creative
+          convinience
+          <div className='space-x-5 mt-5 '>
+            <button className="border-4 font-semibold text-xl px-15 py-3 rounded-lg bg-[#2DF8C5] hover:bg-[#105544] text-[#105544] hover:text-[#2DF8C5] hover:cursor-pointer ">
+              Lorem ipsum dolor sit.
+            </button>
+            <button className="border-4 font-semibold text-xl px-15 py-3 rounded-lg bg-[#2DF8C5] hover:bg-[#105544] text-[#105544] hover:text-[#2DF8C5] hover:cursor-pointer ">
+              Lorem ipsum dolor sit.
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
