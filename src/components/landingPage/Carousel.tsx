@@ -54,7 +54,7 @@ export default function Carousel() {
   return (
     <div className="component-landingPage-Carousel relative w-[80%] rounded-2xl">
       {/* Slider */}
-      <div ref={sliderRef} className="component-landingPage-Carousel keen-slider rounded-lg overflow-hidden">
+      <div ref={sliderRef} className="component-landingPage-Carousel flex keen-slider rounded-lg overflow-hidden">
         {mentorCarouselContent.map((content, idx) => (
           <div
             key={idx}
