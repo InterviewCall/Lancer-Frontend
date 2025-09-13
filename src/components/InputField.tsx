@@ -14,7 +14,7 @@ export default function InputField({
     formState: { errors },
   } = useFormContext();
   return (
-    <div className="component-inputField w-full max-w-sm py-2 rounded-md">
+    <div className="component-inputField w-full py-2 rounded-md">
       <div className="component-inputField flex items-center bg-white rounded-lg px-4 py-2 shadow-sm">
         <input
           {...register(fieldName)}

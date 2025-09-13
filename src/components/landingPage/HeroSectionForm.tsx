@@ -24,9 +24,9 @@ export default function HeroSectionForm() {
     console.log(data);
   };
   return (
-    <div className="component-landingPage-HeroSectionForm w-full h-full  items-center justify-center flex flex-col bg-teal-50 p-10 rounded-2xl">
+    <div className="component-landingPage-HeroSectionForm w-full h-full  items-center justify-center flex flex-col bg-teal-50 p-5 rounded-2xl">
       <FormProvider {...methods}>
-        <form onSubmit={handleSubmit(submitFn)}>
+        <form onSubmit={handleSubmit(submitFn)} className='w-full'>
           <InputField
             placeholder="Program"
             icon={<User className="w-5 h-5 text-gray-400" />}
