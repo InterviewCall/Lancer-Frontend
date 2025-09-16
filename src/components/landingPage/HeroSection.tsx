@@ -31,7 +31,7 @@ const heroSectionHighlightOptionsList = [
 
 export default function HeroSection() {
   return (
-    <div className="component-landingPage-HeroSection flex items-stretch justify-center p-10">
+    <div className="component-landingPage-HeroSection flex items-start justify-center p-10">
       <div className="component-landingPage-HeroSection basis-60/100 px-10">
         <div className="component-landingPage-HeroSection font-bold text-5xl my-5">
           Learn like you would at India’s Top tech companies.

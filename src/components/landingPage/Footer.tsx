@@ -77,11 +77,11 @@ export default function Footer() {
             Copyright © 2025 Lancrs Academy. All rights reserved.
           </p>
           <div className="flex gap-4 text-xl">
-            <FaLinkedin />
-            <FaYoutube />
-            <FaInstagram />
-            <FaTwitter />
-            <FaFacebook />
+            <FaLinkedin className='aspect-square hover:cursor-pointer hover:aspect-[4/3] '/>
+            <FaYoutube className='hover:cursor-pointer hover:aspect-[4/3]'/>
+            <FaInstagram className='hover:cursor-pointer hover:aspect-[4/3]'/>
+            <FaTwitter className='hover:cursor-pointer hover:aspect-[4/3] '/>
+            <FaFacebook className='hover:cursor-pointer hover:aspect-[4/3] '/>
           </div>
         </div>
       </div>
