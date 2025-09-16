@@ -40,7 +40,7 @@ export default function AlumniVideoSection() {
   ];
 
   return (
-    <div className="border w-9/10 border-gray-300 gap-5 my-15 flex flex-wrap items-center justify-center ">
+    <div className="w-9/10 border-gray-300 gap-5 my-15 flex flex-wrap items-center justify-center ">
       {videoContent.map((content) => (
         <div key={content.id} className="my-5 w-1/4  rounded-2xl bg-[#2DF8C5]">
           <div className="p-5">
@@ -50,8 +50,14 @@ export default function AlumniVideoSection() {
             <div className="font-bold text-lg my-2">{content.heading}</div>
             <div className="text-sm ">{content.subHeading}</div>
           </div>
-          <div className="border rounded-b-2xl h-16 text-center bg-gray-50">
+          <div className=" rounded-b-2xl text-center font-semibold text-sm py-3 bg-[#ecf7f6] text-[#29615c]">
             Career in :
+            <div className='flex items-center justify-center gap-2 pt-3 h-fit'>
+                <Image  alt='' src={'/alumni-careers/alumni-cisco.svg'} height={50} width={50}/>
+                <Image  alt='' src={'/alumni-careers/alumni-amazon.svg'} height={50} width={50}/>
+                <Image  alt='' src={'/alumni-careers/alumni-ion.svg'} height={50} width={50}/>
+
+            </div>
           </div>
         </div>
       ))}
