@@ -17,7 +17,7 @@ export default function MentorCard({
         <Image
           src={src}
           alt={'Mentor'}
-          className="w-full h-64 object-cover"
+          className="w-full h-64 object-cover rounded-2xl"
           height={100}
           width={100}
         />

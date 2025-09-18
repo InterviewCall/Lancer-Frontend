@@ -42,9 +42,9 @@ export default function AlumniVideoSection() {
   return (
     <div className="w-9/10 border-gray-300 gap-5 my-15 flex flex-wrap items-center justify-center ">
       {videoContent.map((content) => (
-        <div key={content.id} className="my-5 w-1/4  rounded-2xl bg-[#2DF8C5]">
+        <div key={content.id} className="my-5 w-9/10 sm:w-1/4  rounded-4xl bg-[#2DF8C5]">
           <div className="p-5">
-            <div className="h-fit hover:cursor-pointer rounded-5xl ">
+            <div className="h-fit flex items-center justify-center hover:cursor-pointer rounded-5xl ">
               <Image alt="" src={content.src} width={400} height={400} />
             </div>
             <div className="font-bold text-lg my-2">{content.heading}</div>

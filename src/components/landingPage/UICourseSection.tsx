@@ -198,7 +198,7 @@ export default function UICourseSection() {
   ];
 
   return (
-    <div className="w-full grid grid-cols-2 items-start gap-5 justify-center">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 items-start gap-5 justify-center">
       {UIcourseContent.map((content) => (
         <div key={content.id} className="basis-1 bg-gray-50 rounded-2xl ">
           <div className=" rounded-t-2xl bg-[#2DF8C5] p-4 flex gap-x-2 items-center justify-start">

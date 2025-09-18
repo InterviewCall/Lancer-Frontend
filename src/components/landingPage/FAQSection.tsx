@@ -16,7 +16,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <div className="w-7/10 my-10">
+    <div className="w-9/10 sm:w-7/10 my-10">
       <div className="my-10 text-center font-semibold text-3xl">
         Frequently asked questions
       </div>

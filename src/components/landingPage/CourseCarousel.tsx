@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect } from 'react';
 
-export default function CourseCarousel() {
+export default function CourseCarousel({perView=3}: {perView?: number}) {
     
 const courseCarousel = [
   {
@@ -22,7 +22,7 @@ const courseCarousel = [
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: 'free-snap',
-    slides: { perView: 3 },
+    slides: { perView: perView },
   });
 
   useEffect(() => {

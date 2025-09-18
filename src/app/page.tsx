@@ -1,6 +1,4 @@
-
-
-import { Timer } from 'lucide-react';
+import { Menu, Timer } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -13,6 +11,7 @@ import FAQSection from '@/components/landingPage/FAQSection';
 import Footer from '@/components/landingPage/Footer';
 import HeroSection from '@/components/landingPage/HeroSection';
 import NavbarButton from '@/components/landingPage/NavbarButton';
+import NavbarTimer from '@/components/landingPage/NavbarTimer';
 import SkillCards from '@/components/landingPage/SkillCards';
 import TryOurFreeDemoClassButton from '@/components/landingPage/TryOurFreeDemoClassButton';
 import UICourseSection from '@/components/landingPage/UICourseSection';
@@ -64,19 +63,22 @@ const bottomFeatureList = [
 export default function Page() {
   return (
     <div className="app-page relative flex flex-col  h-full">
-      <div className="app-page w-full bg-[#2DF8C5] flex  items-center justify-center p-2 text-lg ">
-        <span className="app-page ">
-          {'Lancers\'s'} Hiring Wave Scholarship |
-        </span>
-        <span className="app-page ">Grab benefits worth ₹1,80,000 </span>
-        <span className="app-page  font-semibold">| 60 Seats Left |</span>
-        <span className="app-page font-semibold"> Apply Now |</span>
-        <span>
+      <div className="app-page w-full bg-[#2DF8C5] block sm:flex flex-wrap items-center justify-center p-2 text-lg ">
+        <div className="flex items-center justify-center gap-2 ">
+          <div className="app-page ">
+            {'Lancers\'s'} Hiring Wave Scholarship |
+          </div>
+          <div className="app-page ">Grab benefits worth ₹1,80,000 |</div>
+          <div className="app-page  font-semibold"> 60 Seats Left |</div>
+          <div className="app-page font-semibold"> Apply Now |</div>
+        </div>
+        <div className="flex items-center justify-center">
           <Timer />
-        </span>
+          <NavbarTimer />
+        </div>
       </div>
       <div className="app-page w-full h-fit flex items-center justify-between px-10">
-        <div className="app-page ">
+        <div className="app-page p-3">
           <Image
             alt="Lancers"
             src={'/lancersFullLogo.png'}
@@ -84,7 +86,7 @@ export default function Page() {
             height={100}
           />
         </div>
-        <div className="app-page flex items-center justify-center">
+        <div className="app-page hidden sm:flex items-center justify-center">
           <NavbarButton buttonName="Products" />
           {navbarButtonList.map((button) => {
             return <NavbarButton key={button.id} buttonName={button.name} />;
@@ -93,12 +95,15 @@ export default function Page() {
             Sign In
           </button>
         </div>
+        <div className="app-page flex sm:hidden items-center justify-center hover:cursor-pointer">
+          <Menu />
+        </div>
       </div>
       <div className="app-page overflow-y-scroll flex flex-col items-center ">
         <HeroSection />
-        <div className="w-4/5 bg-gray-100 rounded-2xl p-15">
+        <div className="w-full sm:w-4/5 bg-gray-100 rounded-2xl p-15">
           <div className="w-full flex items-center justify-center text-center font-bold text-3xl">
-            <div className="w-1/2 mb-5">
+            <div className="w-4/5 sm:w-1/2 mb-5">
               Build a career in IT sector in Kolkata, sarting salary of 2-3 LPA
             </div>
           </div>
@@ -107,10 +112,10 @@ export default function Page() {
         <button className="app-page py-4 px-6 rounded-lg bg-yellow-400 mt-5 font-bold">
           Download Curriculum
         </button>
-        <div className="app-page  w-[30%] mt-20 text-3xl text-center font-bold ">
+        <div className="app-page w-7/10 sm:w-[30%] mt-20 text-3xl text-center font-bold ">
           Meet our Mentors
         </div>
-        <div className="app-page  w-[40%] my-12 text-sm text-center  ">
+        <div className="app-page w-8/10 sm:w-[40%] my-12 text-sm text-center  ">
           Industry Experts guiding the next generation of innovators. Our team
           of seasoned professionals brings years of real-world experience,
           offering invaluable mentorship and insights to help you achieve
@@ -126,13 +131,13 @@ export default function Page() {
         <div className="app-page w-[60%] font-bold text-4xl text-center my-10">
           Gain the competitive edge with mastery of essential development skills
         </div>
-        <div className="app-page w-[60%] font-light text-sm my-10">
+        <div className="app-page w-8/10 sm:w-[60%] font-light text-sm my-10">
           <SkillCards />
         </div>
-        <div className="w-[30%] font-semibold text-4xl text-center my-10 ">
+        <div className="w-8/10 sm:w-[30%] font-semibold text-4xl text-center my-10 ">
           Learn real life UI/UX experience
         </div>
-        <div className="w-[70%] font-light text-2xl text-center p-5">
+        <div className="w-9/10 sm:w-[70%] font-light text-2xl text-center p-5">
           Learn and grow like you would on a real job. Start from the
           fundamentals, get support from our mentors and community, and build
           your way to the top - through professional work-like Full-stack and
@@ -141,7 +146,7 @@ export default function Page() {
         <div className="w-full flex items-center justify-center">
           <CourseCarousel />
         </div>
-        <div className="space-y-2 w-3/5 text-5xl font-bold text-center my-10">
+        <div className="space-y-2 w-8/10 sm:w-3/5 text-5xl font-bold text-center my-10">
           <div>Personalised Placement Assistance</div>
           <span className="text-[#0b6b53]">সরাসরি সাক্ষাৎকার কল</span>
         </div>
@@ -165,7 +170,7 @@ export default function Page() {
           Program Fee and Scholarship
         </div>
 
-        <div className="w-6/10  flex items-center justify-center px-10 py-5 rounded-4xl bg-[#2DF8C5] ">
+        <div className="w-9/10 sm:w-6/10  flex items-center justify-center px-10 py-5 rounded-4xl bg-[#2DF8C5] ">
           <div className="bg-gray-50 basis-1/3 flex flex-col gap-3 items-start justify-center  rounded-3xl p-16">
             <div className="bg-amber-200 py-1 px-2 rounded-lg font-semibold">
               Only for
@@ -177,7 +182,7 @@ export default function Page() {
             </div>
             <div>*before scholarship</div>
           </div>
-          <div className="px-10 py-5 basis-2/3">
+          <div className="px-2 sm:px-10 py-1.5 sm:py-5 basis-2/3">
             <div className="p-2">
               <div className="font-bold">Absolutely Free Demo Class</div>
               <div className="">No fees required</div>
@@ -192,7 +197,7 @@ export default function Page() {
               </div>
               <div>Sudhumatro sofolotar fee porisodh korun </div>
             </div>
-            <div className="p-2">
+            <div className="hidden sm:block p-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
               incidunt consequuntur impedit dolor hic officia mollitia quae
               eligendi perferendis sequi, illum ducimus magnam obcaecati vero
@@ -208,16 +213,16 @@ export default function Page() {
         <div className="font-bold text-3xl text-center my-10">
           ১০,০০০+ ডিজাইন উৎসাহীদের সম্প্রদায়ে যোগ দিন
         </div>
-        <div className="w-6/10 text-center text-lg">
+        <div className="w-9/10 sm:w-6/10 text-center text-lg">
           <span className="font-bold">সংযোগ করুন, শিখুন এবং বিকশিত হন</span>{' '}
           একটি প্রাণবন্ত সম্প্রদায়ের সঙ্গে, যেখানে UI/UX ডিজাইনার ও শিল্প
           পেশাদাররা আমাদের বিস্তৃত প্রশিক্ষণের মাধ্যমে তাদের ক্যারিয়ার
           রূপান্তরিত করেছেন।
         </div>
-        <div className="rounded-3xl w-6/10 mt-10 bg-[#2DF8C5] p-10 text-4xl text-center font-bold">
+        <div className="rounded-3xl w-9/10 sm:w-6/10 mt-10 bg-[#2DF8C5] p-10 text-4xl text-center font-bold">
           Gain the privilage of top UI/UX design experise and achieve creative
           convinience
-          <div className="space-x-5 mt-5 ">
+          <div className="space-y-4 sm:space-x-5 mt-5 ">
             <button className="border-4 font-semibold text-xl px-15 py-3 rounded-lg bg-[#2DF8C5] hover:bg-[#105544] text-[#105544] hover:text-[#2DF8C5] hover:cursor-pointer ">
               Lorem ipsum dolor sit.
             </button>
@@ -236,7 +241,7 @@ export default function Page() {
         <TryOurFreeDemoClassButton />
 
         <div className="w-9/10 flex flex-col items-center justify-center my-20">
-          <div className="w-5/10 text-center text-5xl font-bold">
+          <div className="w-full sm:w-5/10 text-center text-5xl font-bold">
             প্রায়োগিক ডিজাইন-ভিত্তিক শিক্ষার পদ্ধতি চাহিদাসম্পন্ন UI/UX দক্ষতা
             আয়ত্ত করতে
           </div>
@@ -252,8 +257,8 @@ export default function Page() {
 
         <TryOurFreeDemoClassButton />
 
-        <div className="w-8/10 text-center my-20 space-y-10 flex flex-col items-center justify-center">
-          <div className="w-7/10  space-y-10">
+        <div className="w-9/10 sm:w-8/10 text-center my-20 space-y-10 flex flex-col items-center justify-center">
+          <div className="w-full sm:w-7/10  space-y-10">
             <div className="font-bold text-4xl">
               বাস্তব অভিজ্ঞতা, বাস্তব ডিজাইন-ভিত্তিক শিক্ষা ল্যান্সার্স
               অ্যাকাডেমিতে
