@@ -31,8 +31,8 @@ const heroSectionHighlightOptionsList = [
 
 export default function HeroSection() {
   return (
-    <div className="component-landingPage-HeroSection flex items-stretch justify-center p-10">
-      <div className="component-landingPage-HeroSection basis-60/100 px-10">
+    <div className="component-landingPage-HeroSection flex flex-col sm:flex-row items-start justify-center p-10">
+      <div className="component-landingPage-HeroSection basis-1 sm:basis-[60%] px-5 sm:px-10 ">
         <div className="component-landingPage-HeroSection font-bold text-5xl my-5">
           Learn like you would at India’s Top tech companies.
         </div>
@@ -57,10 +57,10 @@ export default function HeroSection() {
           </span>{' '}
           your dream role at the best tech companies
         </div>
-        <div className=" p-4  w-[80%] h-[200px] flex items-stretch justify-center rounded-lg gap-x-2">
-          <div className="basis-2/3 border rounded-xl border-gray-100 bg-gray-200 h-full ">
+        <div className=" p-4 w-full sm:w-[80%] h-fit flex items-stretch justify-center rounded-lg gap-x-2">
+          <div className="basis-2/3 border py-3 rounded-xl border-gray-100 bg-gray-200 h-full ">
             <div className="w-full flex items-center justify-center text-center h-1/2">
-              <div className='font-semibold text-2xl'>100% assured referrals</div>
+              <div className='font-semibold text-2xl m-3'>100% assured referrals</div>
             </div>
             <div className="w-full flex justify-center">
               <div className="border w-[90%]"></div>
@@ -80,7 +80,7 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="basis-1/3 border flex flex-col justify-around border-gray-100 bg-gray-200 rounded-xl">
+          <div className="basis-1/3 border py-3 flex flex-col justify-around border-gray-100 bg-gray-200 rounded-xl">
             <div className="w-full text-center ">
               <div className="w-full text-center font-medium">Online</div>
                 <div className="w-full text-center font-semibold text-xl">9 months</div>

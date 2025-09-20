@@ -10,4 +10,5 @@ export const HeroSectionFormSchema = z.object({
     .string()
     .min(1, { message: 'Phone is required' })
     .regex(/^\d{10}$/, { message: 'Phone must be a 10-digit number' }),
+  newsLetter: z.boolean().optional(),
 });

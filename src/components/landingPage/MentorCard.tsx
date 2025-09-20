@@ -7,17 +7,17 @@ export default function MentorCard({
   companySrcArray,
 }: {
   name: string;
-  description: string;
+  description: string[];
   src: string;
   companySrcArray: string[];
 }) {
   return (
-    <div className="component-landingPage-MentorCard h-full flex gap-x-4 p-2 rounded-lg overflow-hidden">
+    <div className="component-landingPage-MentorCard h-full flex gap-x-4 p-2 rounded-lg overflow-hidden border border-gray-100">
       <div className="component-landingPage-MentorCard basis-1/3 rounded-2xl overflow-hidden">
         <Image
           src={src}
           alt={'Mentor'}
-          className="w-full h-64 object-cover"
+          className="w-full h-64 object-cover rounded-2xl"
           height={100}
           width={100}
         />
@@ -26,7 +26,9 @@ export default function MentorCard({
         <div className="component-landingPage-MentorCard flex flex-col justify-between h-full">
           <div>
             <div className="component-landingPage-MentorCard font-bold text-2xl">{name}</div>
-            <div>{description}</div>
+            <div>{description.map((desc, index)=>(
+              <div key={index} className="component-landingPage-MentorCard text-md m-1 text-gray-600">{desc}</div>
+            ))}</div>
           </div>
           <div className="component-landingPage-MentorCard flex flex-wrap gap-2 items-stretch justify-center m-2">
             {companySrcArray.map((company, index) => (

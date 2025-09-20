@@ -17,6 +17,9 @@ export default function HeroSectionForm() {
     mode: 'onChange',
     reValidateMode: 'onBlur',
     resolver: zodResolver(HeroSectionFormSchema),
+    defaultValues: {
+      newsLetter: false,
+    }
   });
 
   const { handleSubmit } = methods;
@@ -47,7 +50,11 @@ export default function HeroSectionForm() {
             icon={<User className="w-5 h-5 text-gray-400" />}
             fieldName="phone"
           />
-          <button type="submit" className="component-landingPage-HeroSectionForm p-2 w-full rounded-md bg-yellow-400">
+          < input
+            type="checkbox"
+            {...methods.register('newsLetter')}/> 
+            <span className='m-3 text-xs text-gray-400'>আমি এই নম্বরে SMS এবং WhatsApp যোগাযোগ গ্রহণ করতে সম্মত আছি</span>
+          <button type="submit" className="component-landingPage-HeroSectionForm mt-2 p-2 w-full rounded-md bg-yellow-400">
             Book your trial
           </button>
         </form>
