@@ -1,4 +1,4 @@
-import { Menu, Timer } from 'lucide-react';
+import { Timer } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -10,38 +10,12 @@ import CourseCarousel from '@/components/landingPage/CourseCarousel';
 import FAQSection from '@/components/landingPage/FAQSection';
 import Footer from '@/components/landingPage/Footer';
 import HeroSection from '@/components/landingPage/HeroSection';
-import NavbarButton from '@/components/landingPage/NavbarButton';
+import Navbar from '@/components/landingPage/Navbar';
 import NavbarTimer from '@/components/landingPage/NavbarTimer';
 import SkillCards from '@/components/landingPage/SkillCards';
 import TryOurFreeDemoClassButton from '@/components/landingPage/TryOurFreeDemoClassButton';
 import UICourseSection from '@/components/landingPage/UICourseSection';
 
-const navbarButtonList = [
-  {
-    id: 1,
-    name: 'Products',
-  },
-  {
-    id: 2,
-    name: 'Hire',
-  },
-  {
-    id: 3,
-    name: 'MasterClass',
-  },
-  {
-    id: 4,
-    name: 'Projects',
-  },
-  {
-    id: 5,
-    name: 'Blog',
-  },
-  {
-    id: 6,
-    name: 'Placements',
-  },
-];
 
 const featureList = [
   '/features/feature1.png',
@@ -63,21 +37,23 @@ const bottomFeatureList = [
 export default function Page() {
   return (
     <div className="app-page relative flex flex-col  h-full">
-      <div className="app-page w-full bg-[#2DF8C5] block sm:flex flex-wrap items-center justify-center p-2 text-lg ">
-        <div className="flex items-center justify-center gap-2 ">
+      <div className="app-page w-full bg-[#2DF8C5] block sm:flex flex-wrap items-center justify-center p-2 text-base sm:text-lg ">
+        <div className="text-center sm:flex items-center justify-center gap-2 ">
           <div className="app-page ">
-            {'Lancers\'s'} Hiring Wave Scholarship |
+            {'Lancers\'s'} Hiring Wave Scholarship | <span className="app-page sm:hidden">Grab benefits worth ₹1,80,000 |</span>
           </div>
-          <div className="app-page ">Grab benefits worth ₹1,80,000 |</div>
-          <div className="app-page  font-semibold"> 60 Seats Left |</div>
+          <div className="app-page hidden sm:block ">Grab benefits worth ₹1,80,000 |</div>
+          <div className='flex items-center text-center justify-center gap-2'>
+            <div className="app-page  font-semibold"> 60 Seats Left |</div>
           <div className="app-page font-semibold"> Apply Now |</div>
+          </div>
         </div>
         <div className="flex items-center justify-center">
           <Timer />
           <NavbarTimer />
         </div>
       </div>
-      <div className="app-page w-full h-fit flex items-center justify-between px-10">
+      {/* <div className="app-page w-full h-fit flex items-center justify-between px-10">
         <div className="app-page p-3">
           <Image
             alt="Lancers"
@@ -86,19 +62,9 @@ export default function Page() {
             height={100}
           />
         </div>
-        <div className="app-page hidden sm:flex items-center justify-center">
-          <NavbarButton buttonName="Products" />
-          {navbarButtonList.map((button) => {
-            return <NavbarButton key={button.id} buttonName={button.name} />;
-          })}
-          <button className="app-page  p-3 rounded-lg font-semibold text-sm ">
-            Sign In
-          </button>
-        </div>
-        <div className="app-page flex sm:hidden items-center justify-center hover:cursor-pointer">
-          <Menu />
-        </div>
-      </div>
+        <Navbar />        
+      </div> */}
+      <Navbar/>
       <div className="app-page overflow-y-scroll flex flex-col items-center ">
         <HeroSection />
         <div className="w-full sm:w-4/5 bg-gray-100 rounded-2xl p-15">

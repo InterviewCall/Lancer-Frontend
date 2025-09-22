@@ -54,7 +54,7 @@ export default function HeroSectionForm() {
             type="checkbox"
             {...methods.register('newsLetter')}/> 
             <span className='m-3 text-xs text-gray-400'>আমি এই নম্বরে SMS এবং WhatsApp যোগাযোগ গ্রহণ করতে সম্মত আছি</span>
-          <button type="submit" className="component-landingPage-HeroSectionForm mt-2 p-2 w-full rounded-md bg-yellow-400">
+          <button type="submit" className="component-landingPage-HeroSectionForm mt-2 p-2 w-full rounded-md bg-yellow-400 hover:cursor-pointer hover:bg-yellow-500 font-bold">
             Book your trial
           </button>
         </form>
