@@ -147,7 +147,7 @@ export default function Carousel() {
   }, [instanceRef]);
 
   return (
-    <div className="component-landingPage-Carousel relative w-[80%] rounded-2xl">
+    <div className="component-landingPage-Carousel relative w-full sm:w-[80%] rounded-2xl border border-gray-200">
       {/* Slider */}
       <div
         ref={sliderRef}
