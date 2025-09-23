@@ -136,15 +136,15 @@ export default function Page() {
           Program Fee and Scholarship
         </div>
 
-        <div className="w-9/10 sm:w-6/10  flex items-center justify-center px-10 py-5 rounded-4xl bg-[#2DF8C5] ">
+        <div className="w-9/10 sm:w-6/10  sm:flex items-center justify-center px-10 py-10 sm:py-5 rounded-4xl bg-[#2DF8C5] ">
           <div className="bg-gray-50 basis-1/3 flex flex-col gap-3 items-start justify-center  rounded-3xl p-16">
-            <div className="bg-amber-200 py-1 px-2 rounded-lg font-semibold">
+            <div className="bg-amber-200 py-1 px-2 rounded-lg text-lg sm:text-base font-semibold">
               Only for
             </div>
             <div className="">
-              <span className="font-bold text-3xl">639</span>
-              <span className="text-[#24b490] font-semibold">/month</span>
-              <div className="text-sm text-[#24b490]">(for 6 months)</div>
+              <span className="font-bold text-4xl sm:text-3xl">639</span>
+              <span className="text-[#24b490] font-semibold text-lg sm:text-base">/month</span>
+              <div className="text-base sm:text-sm text-[#24b490]">(for 6 months)</div>
             </div>
             <div>*before scholarship</div>
           </div>
@@ -163,7 +163,7 @@ export default function Page() {
               </div>
               <div>Sudhumatro sofolotar fee porisodh korun </div>
             </div>
-            <div className="hidden sm:block p-2">
+            <div className="block p-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
               incidunt consequuntur impedit dolor hic officia mollitia quae
               eligendi perferendis sequi, illum ducimus magnam obcaecati vero

@@ -25,6 +25,10 @@ const skillCardsList= [
         id: 7,
         src: '/skillCards/uxpin.svg',
     },
+    {
+        id:8,
+        src:'/skillCards/invision.svg',
+    }
 ];
 
 export default function SkillCards(){

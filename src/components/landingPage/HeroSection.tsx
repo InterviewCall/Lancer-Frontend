@@ -57,8 +57,8 @@ export default function HeroSection() {
           </span>{' '}
           your dream role at the best tech companies
         </div>
-        <div className=" p-4 w-full sm:w-[80%] h-fit flex items-stretch justify-center rounded-lg gap-x-2">
-          <div className="basis-2/3 border py-3 rounded-xl border-gray-100 bg-gray-200 h-full ">
+        <div className=" p-4 w-full sm:w-[80%] h-fit flex flex-col sm:flex-row items-center sm:items-stretch justify-center rounded-lg gap-2">
+          <div className="w-full sm:basis-2/3 border py-3 rounded-xl border-gray-100 bg-gray-200 h-full ">
             <div className="w-full flex items-center justify-center text-center h-1/2">
               <div className='font-semibold text-xl sm:text-2xl m-3'>100% assured referrals</div>
             </div>
@@ -70,7 +70,7 @@ export default function HeroSection() {
                 <div className="w-full text-center font-medium">Dream Job</div>
                 <div className="w-full text-center font-semibold text-lg sm:text-xl">6 - 15 LPA</div>
               </div>
-              <div className="h-full flex justify-center items-center">
+              <div className="flex justify-center items-center">
                 <div className="border h-1/2"></div>
               </div>
 
@@ -80,16 +80,16 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="basis-1/3 border py-3 flex flex-col justify-around border-gray-100 bg-gray-200 rounded-xl">
+          <div className="w-1/2 sm:w-full sm:basis-1/3 border py-3 flex flex-col justify-around border-gray-100 bg-gray-200 rounded-xl">
             <div className="w-full text-center ">
               <div className="w-full text-center font-medium">Online</div>
                 <div className="w-full text-center font-semibold text-lg sm:text-xl">9 months</div>
             </div>
             <div className="w-full flex justify-center">
-              <div className="border w-[90%]"></div>
+              <div className="border w-[70%]"></div>
             </div>
             <div className="w-full text-center ">
-              <div className="w-full text-center font-medium">Demo Session</div>
+              <div className="w-full text-center mt-3 font-medium">Demo Session</div>
                 <div className="w-full text-center font-semibold text-lg sm:text-xl">Free</div>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function HeroSection() {
           })}
         </div>
       </div>
-      <div className="component-landingPage-HeroSection basis-40/100 ">
+      <div className="component-landingPage-HeroSection flex items-center justify-center  sm:basis-40/100 ">
         <HeroSectionForm />
       </div>
     </div>
