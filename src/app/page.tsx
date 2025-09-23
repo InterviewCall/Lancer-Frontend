@@ -1,4 +1,4 @@
-import { Timer } from 'lucide-react';
+import { Check, Timer } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -150,11 +150,11 @@ export default function Page() {
           </div>
           <div className="px-2 sm:px-10 py-1.5 sm:py-5 basis-2/3">
             <div className="p-2">
-              <div className="font-bold">Absolutely Free Demo Class</div>
+              <div className="font-bold"> <Check strokeWidth={3} className='inline' /> Absolutely Free Demo Class</div>
               <div className="">No fees required</div>
             </div>
             <div className="p-2">
-              <div className="font-bold">Guaranteed Scholarship</div>
+              <div className="font-bold"> <Check strokeWidth={3} className='inline' /> Guaranteed Scholarship</div>
               <div>After the demo class</div>
             </div>
             <div className="p-2">

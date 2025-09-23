@@ -67,7 +67,7 @@ export default function HeroSection() {
             </div>
             <div className="flex items-stretch justify-center  gap-x-2 h-1/2">
               <div className="w-full  mt-3">
-                <div className="w-full text-center font-medium">Dream Job</div>
+                <div className="w-full text-center font-semibold text-[#33a79d]">Dream Job</div>
                 <div className="w-full text-center font-semibold text-lg sm:text-xl">6 - 15 LPA</div>
               </div>
               <div className="flex justify-center items-center">
@@ -75,21 +75,21 @@ export default function HeroSection() {
               </div>
 
               <div className="w-full mt-3">
-                <div className="w-full text-center font-medium">Super Dream Job</div>
+                <div className="w-full text-center text-[#33a79d] font-semibold">Super Dream Job</div>
                 <div className="w-full text-center font-semibold text-lg sm:text-xl">16 - 25 LPA</div>
               </div>
             </div>
           </div>
           <div className="w-1/2 sm:w-full sm:basis-1/3 border py-3 flex flex-col justify-around border-gray-100 bg-gray-200 rounded-xl">
             <div className="w-full text-center ">
-              <div className="w-full text-center font-medium">Online</div>
+              <div className="w-full text-center font-semibold text-[#33a79d]">Online</div>
                 <div className="w-full text-center font-semibold text-lg sm:text-xl">9 months</div>
             </div>
             <div className="w-full flex justify-center">
               <div className="border w-[70%]"></div>
             </div>
             <div className="w-full text-center ">
-              <div className="w-full text-center mt-3 font-medium">Demo Session</div>
+              <div className="w-full text-center mt-3 font-semibold text-[#33a79d]">Demo Session</div>
                 <div className="w-full text-center font-semibold text-lg sm:text-xl">Free</div>
             </div>
           </div>
