@@ -66,16 +66,16 @@ export default function ComparisonTable() {
               <td className="p-5">{row.feature}</td>
               <td className="p-5 text-center">
                 {row.video ? (
-                  <Check className="text-green-500 inline" />
+                  <Check strokeWidth={3} className="text-green-500 inline" />
                 ) : (
-                  <X className="text-gray-400 inline" />
+                  <X strokeWidth={3} className="text-gray-400 inline" />
                 )}
               </td>
               <td className="p-5 text-center">
                 {row.bootcamp ? (
-                  <Check className="text-green-500 inline" />
+                  <Check strokeWidth={3} className="text-green-500 inline" />
                 ) : (
-                  <X className="text-gray-400 inline" />
+                  <X strokeWidth={3} className="text-gray-400 inline" />
                 )}
               </td>
               <td
@@ -84,9 +84,9 @@ export default function ComparisonTable() {
                 }`}
               >
                 {row.academy ? (
-                  <Check className="text-green-500 inline" />
+                  <Check strokeWidth={3} className="text-green-500 inline" />
                 ) : (
-                  <X className="text-gray-400 inline" />
+                  <X strokeWidth={3} className="text-gray-400 inline" />
                 )}
               </td>
             </tr>
