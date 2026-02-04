@@ -2,53 +2,39 @@ import Image from 'next/image';
 
 export default function AlumniVideoSection() {
   const videoContent = [
-    {
-      id: 1,
-      src: '/alumniThumbnail.png',
-      heading: 'Meet out student',
-      subHeading:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.',
-    },
-    {
-      id: 2,
-      src: '/alumniThumbnail.png',
-      heading: 'Meet our alumni',
-      subHeading:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.',
-    },
-    {
-      id: 3,
-      src: '/alumniThumbnail.png',
-      heading: 'Meet our faculty',
-      subHeading:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.',
-    },
-    {
-      id: 4,
-      src: '/alumniThumbnail.png',
-      heading: 'Meet our staff',
-      subHeading:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.',
-    },
-    {
-      id: 5,
-      src: '/alumniThumbnail.png',
-      heading: 'Meet our community',
-      subHeading:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, quas.',
-    },
-  ];
+  {
+    id: 1,
+    src: '/alumniThumbnail.png',
+    heading: 'Meet Shivansh Yashasvi',
+    subHeading:
+      'With the right guidance, consistent practice, and mentorship, I was able to switch into a better role and build real confidence in Full-Stack development. The projects, mock interviews, and resume support helped me crack interviews and upgrade my career.',
+  },
+  {
+    id: 2,
+    src: '/alumniThumbnail.png',
+    heading: 'Meet Rounak Goswami',
+    subHeading:
+      'I followed the structured plan, worked on projects, and improved my problem-solving and interview skills step by step. With continuous guidance and mock interviews, I successfully switched to a better opportunity and moved into Morgan Stanley.',
+  },
+  {
+    id: 3,
+    src: '/alumniThumbnail.png',
+    heading: 'Meet Abhinay Reddy',
+    subHeading:
+      'The Full-Stack curriculum was practical and project-heavy, which helped me become job-ready. From React to backend APIs and deployment, the hands-on learning and interview preparation helped me switch to Valuelabs with strong confidence.',
+  },
+];
 
   return (
-    <div className="w-9/10 border-gray-300 gap-5 my-15 flex flex-wrap items-center justify-center ">
+    <div className="w-9/10 sm:w-8/10 border-gray-300 gap-7 my-15 sm:grid grid-cols-3 items-center justify-between ">
       {videoContent.map((content) => (
-        <div key={content.id} className="my-5 w-9/10 sm:w-1/4  rounded-4xl bg-[#2DF8C5]">
+        <div key={content.id} className="my-5 w-full  rounded-4xl bg-[#2DF8C5]">
           <div className="p-5">
             <div className="h-fit flex items-center justify-center hover:cursor-pointer rounded-5xl ">
               <Image alt="" src={content.src} width={400} height={400} />
             </div>
-            <div className="font-bold text-lg my-2">{content.heading}</div>
-            <div className="text-sm ">{content.subHeading}</div>
+            <div className="font-bold text-xl my-2 text-gray-900">{content.heading}</div>
+            <div className="text-sm tracking-wider text-gray-700">{content.subHeading}</div>
           </div>
           <div className=" rounded-b-2xl text-center font-semibold text-sm py-3 bg-[#ecf7f6] text-[#29615c]">
             Career in :

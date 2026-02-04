@@ -33,9 +33,9 @@ const skillCardsList= [
 
 export default function SkillCards(){
     return (
-        <div className='component-landingPage-skillCard w-full flex flex-wrap gap-5 justify-center items-center'>
+        <div className='component-landingPage-skillCard w-full grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-7 justify-center items-center'>
             {skillCardsList.map((skill)=>(
-                <Image key={skill.id} src={skill.src} alt='Skills' height={150} width={150} />
+                <Image key={skill.id} src={skill.src} alt='Skills' height={0} width={0} className='w-full h-auto' />
             ))}
         </div>
     );

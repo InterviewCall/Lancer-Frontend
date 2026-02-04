@@ -1,71 +1,78 @@
 import { HelpCircle, Home, Phone } from 'lucide-react';
 import Image from 'next/image';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="w-full   bg-teal-400 text-black">
+    <footer className="w-full bg-[#2DF8C5] text-black">
       <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo & Address */}
         <div>
-          <Image alt='' src={'/lancersFullLogo.png'} height={100} width={100} />
-          <h2 className="text-lg font-bold">
-            Lancrs Academy <span className="text-sm block">বাংলা</span>
-          </h2>
+          <Image alt="" src="/lancersFullLogo.png" height={100} width={120} />
+          <h2 className="text-lg font-bold mt-2">Lancrs Academy</h2>
+
           <p className="mt-3 flex items-start gap-2 text-sm">
             <Home className="w-5 h-5 shrink-0" />
-            ৮৬ গোল্ডেন রোড, শ্রীভূমি, উত্তর ২৪ পরগনা, শ্রীভূমি, শঙ্করপুর, ভারত, ৭০০০৪৮
+            86 Golaghata Road, Shyamnagar, North 24 Parganas,
+            Shyamnagar, West Bengal, India – 700058
           </p>
         </div>
 
         {/* Contact Info */}
         <div>
           <p className="flex items-center gap-2 font-semibold">
-            <HelpCircle className="w-4 h-4" /> কাস্টমার কেয়ারি
+            <HelpCircle className="w-4 h-4" /> Customer Support
           </p>
           <p className="text-sm mt-1">support@banglaacademy.lancrs.com</p>
 
           <p className="flex items-center gap-2 font-semibold mt-4">
-            <HelpCircle className="w-4 h-4" /> সাধারণ জিজ্ঞাসা
+            <HelpCircle className="w-4 h-4" /> General Enquiries
           </p>
           <p className="text-sm mt-1">enquiry@banglaacademy.lancrs.com</p>
+
           <p className="flex items-center gap-2 text-sm mt-1">
-            <Phone className="w-4 h-4" /> +91 6299 717 391
+            <Phone className="w-4 h-4" /> +91 6296 797 309
           </p>
         </div>
 
         {/* Community & Career */}
         <div className="space-y-4 text-sm">
           <div>
-            <h3 className="font-semibold">কমিউনিটি প্রোগ্রামস</h3>
+            <h3 className="font-semibold">Community Programs</h3>
             <ul className="mt-1 space-y-1">
-              <li>#IBelieveInDoing চ্যালেঞ্জ</li>
-              <li>ল্যানক্র্স ইউএক্সডিজাইন অফ লার্নিং</li>
-              <li>ল্যানক্র্স প্রোজেক্ট হাব</li>
+              <li>#IBelieveInDoing Challenge</li>
+              <li>Lancrs Intern Offer Drive</li>
+              <li>Lancrs Project Hub</li>
             </ul>
           </div>
+
           <div>
-            <h3 className="font-semibold">ক্যারিয়ার প্রোগ্রামস</h3>
+            <h3 className="font-semibold">Career Programs</h3>
             <ul className="mt-1 space-y-1">
-              <li>ফুল স্ট্যাক ডেভেলপমেন্ট ফেলোশিপ</li>
-              <li>অ্যাপ ডেভেলপমেন্ট ফেলোশিপ</li>
-              <li>ডেটা অ্যানালিটিক্স ফেলোশিপ</li>
-              <li>ডেটা সায়েন্স ফেলোশিপ</li>
-              <li>সব কোর্স দেখুন</li>
+              <li>Full Stack Development Program</li>
+              <li>For Businesses</li>
+              <li>Hire from Lancrs Academy</li>
+              <li>Lancrs Academy Onboard</li>
             </ul>
           </div>
         </div>
 
         {/* Links */}
         <div className="space-y-2 text-sm">
-          <h3 className="font-semibold">ল্যাডার্স একাডেমি</h3>
+          <h3 className="font-semibold">Lancrs Academy</h3>
           <ul className="space-y-1">
-            <li>প্রেসমেন্ট রিপোর্ট</li>
-            <li>সাফল্যের গল্প</li>
-            <li>সম্পর্কে</li>
-            <li>ব্লগ</li>
-            <li>ব্যবহারের শর্তাবলী</li>
-            <li>গোপনীয়তা নীতি</li>
+            <li>Placement Report</li>
+            <li>Success Stories</li>
+            <li>About Us</li>
+            <li>Contact</li>
+            <li>Refund Policy</li>
+            <li>Terms of Use</li>
           </ul>
         </div>
       </div>
@@ -74,14 +81,16 @@ export default function Footer() {
       <div className="border-t border-black/20 mt-6">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm">
-            Copyright © 2025 Lancrs Academy. All rights reserved.
+            Copyright © 2026 IvyLeague Catform Academy Private Limited.
+            All rights reserved.
           </p>
+
           <div className="flex gap-4 text-xl">
-            <FaLinkedin className='aspect-square hover:cursor-pointer hover:aspect-[4/3] '/>
-            <FaYoutube className='hover:cursor-pointer hover:aspect-[4/3]'/>
-            <FaInstagram className='hover:cursor-pointer hover:aspect-[4/3]'/>
-            <FaTwitter className='hover:cursor-pointer hover:aspect-[4/3] '/>
-            <FaFacebook className='hover:cursor-pointer hover:aspect-[4/3] '/>
+            <FaLinkedin className="hover:cursor-pointer" />
+            <FaYoutube className="hover:cursor-pointer" />
+            <FaInstagram className="hover:cursor-pointer" />
+            <FaTwitter className="hover:cursor-pointer" />
+            <FaFacebook className="hover:cursor-pointer" />
           </div>
         </div>
       </div>

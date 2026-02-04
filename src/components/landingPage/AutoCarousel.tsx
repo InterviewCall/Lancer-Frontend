@@ -46,12 +46,12 @@ const autoCarouselItems = [
   },
 ];
 
-export default function AutoCarousel() {
+export default function AutoCarousel({direction}: {direction: 'left' | 'right'}) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
     <div
-      className="component-landingPage-AutoCarousel w-full h-fit overflow-hidden bg-teal-50"
+      className="component-landingPage-AutoCarousel w-full h-fit overflow-hidden "
       onMouseEnter={() => {
         if (containerRef.current)
           containerRef.current.style.animationPlayState = 'paused';
@@ -63,15 +63,16 @@ export default function AutoCarousel() {
     >
       <div
         ref={containerRef}
-        className="component-landingPage-AutoCarousel flex gap-3 animate-scroll w-max"
+        className={`component-landingPage-AutoCarousel flex gap-5 animate-scroll-${direction} w-max`}
       >
         {[...autoCarouselItems, ...autoCarouselItems].map((item, idx) => (
-          <span key={idx} className="component-landingPage-AutoCarousel rounded-2xl ">
+          <span key={idx} className="  bg-teal-50 component-landingPage-AutoCarousel rounded-2xl ">
             <Image
               alt="testimonial"
               src={item.src}
               height={300}
               width={300}
+              className=''
             />
           </span>
         ))}
