@@ -2,7 +2,7 @@
 
 import { useKeenSlider } from 'keen-slider/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import MentorCard from './MentorCard';
 
@@ -83,7 +83,7 @@ const mentorCarouselContent = [
   {
     id: 7,
     name: 'Maria Shah',
-    description: ['Software Engineer @Walmart India'],
+    description: ['Certified NLP Trainer', 'Ex-Trainer @ICICI Bank', 'Ex-Trainer @Kotak Bank' ,'15 years of experience'],
     src: '/mentors/profile/mentor7-profile.svg',
     companySrcArray: [
       '/mentors/companies/icici.svg',
@@ -128,10 +128,19 @@ const mentorCarouselContent = [
 ];
 
 export default function Carousel() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
-    mode: 'free-snap',
+    mode: 'free',
     slides: { perView: 1 },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
+    },
   });
 
   useEffect(() => {
@@ -147,7 +156,7 @@ export default function Carousel() {
   }, [instanceRef]);
 
   return (
-    <div className="component-landingPage-Carousel relative w-full sm:w-[80%] rounded-2xl border border-gray-200">
+    <div className="component-landingPage-Carousel relative w-full sm:w-[80%] rounded-2xl">
       {/* Slider */}
       <div
         ref={sliderRef}
@@ -168,19 +177,40 @@ export default function Carousel() {
         ))}
       </div>
 
-      {/* Controls */}
+      {/* Arrows */}
       <button
         onClick={() => instanceRef.current?.prev()}
-        className="component-landingPage-Carousel absolute top-1/2 left-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+        className="hidden absolute top-1/2 left-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
       >
         <ChevronLeft />
       </button>
+
       <button
         onClick={() => instanceRef.current?.next()}
-        className="component-landingPage-Carousel absolute top-1/2 right-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+        className="hidden absolute top-1/2 right-2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
       >
         <ChevronRight />
       </button>
+
+      {/* Dots */}
+      {loaded && instanceRef.current && (
+        <div className=" flex w-full items-center justify-center mt-8  gap-2">
+          {Array.from(
+            { length: instanceRef.current.track.details.slides.length },
+            (_, idx) => (
+              <button
+                key={idx}
+                onClick={() => instanceRef.current?.moveToIdx(idx)}
+                className={`h-2 w-2 rounded-full transition-all ${
+                  currentSlide === idx
+                    ? 'bg-gray-200 w-4'
+                    : 'bg-gray-400'
+                }`}
+              />
+            )
+          )}
+        </div>
+      )}
     </div>
   );
 }

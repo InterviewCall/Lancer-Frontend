@@ -1,4 +1,4 @@
-import { Check, Timer } from 'lucide-react';
+import { Timer } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -12,40 +12,27 @@ import Footer from '@/components/landingPage/Footer';
 import HeroSection from '@/components/landingPage/HeroSection';
 import Navbar from '@/components/landingPage/Navbar';
 import NavbarTimer from '@/components/landingPage/NavbarTimer';
+import PlacementReport from '@/components/landingPage/PlacementReport';
+import ProgramFeeAndScholarships from '@/components/landingPage/ProgramFeeAndScholarships';
 import SkillCards from '@/components/landingPage/SkillCards';
 import TryOurFreeDemoClassButton from '@/components/landingPage/TryOurFreeDemoClassButton';
 import UICourseSection from '@/components/landingPage/UICourseSection';
+import { autoCarouselItemsLeft, autoCarouselItemsRight, bottomFeatureListDesk, bottomFeatureListMob, topFeatureListDesk, topFeatureListMob } from '@/components/utils';
 
 
-const featureList = [
-  '/features/feature1.png',
-  '/features/feature2.png',
-  '/features/feature3.png',
-  '/features/feature4.png',
-  '/features/feature5.png',
-];
-
-const bottomFeatureList = [
-  '/bottomFeatures/bottomFeature1.png',
-  '/bottomFeatures/bottomFeature2.png',
-  '/bottomFeatures/bottomFeature3.png',
-  '/bottomFeatures/bottomFeature4.png',
-  '/bottomFeatures/bottomFeature5.png',
-  '/bottomFeatures/bottomFeature6.png',
-];
 
 export default function Page() {
   return (
     <div className="app-page relative flex flex-col  h-full">
-      <div className="app-page w-full bg-[#2DF8C5] block sm:flex flex-wrap items-center justify-center p-2 text-base sm:text-lg ">
+      <div className="app-page w-full bg-[#2DF8C5] block sm:flex flex-wrap items-center justify-center p-2 text-sm sm:text-lg ">
         <div className="text-center sm:flex items-center justify-center gap-2 ">
           <div className="app-page ">
             {'Lancers\'s'} Hiring Wave Scholarship | <span className="app-page sm:hidden">Grab benefits worth ₹1,80,000 |</span>
           </div>
           <div className="app-page hidden sm:block ">Grab benefits worth ₹1,80,000 |</div>
-          <div className='flex items-center text-center justify-center gap-2'>
+          <div className=' flex items-center text-center justify-center gap-2 '>
             <div className="app-page  font-semibold"> 60 Seats Left |</div>
-          <div className="app-page font-semibold"> Apply Now |</div>
+            <div className="app-page font-semibold"> Apply Now |</div>
           </div>
         </div>
         <div className="flex items-center justify-center">
@@ -64,201 +51,263 @@ export default function Page() {
         </div>
         <Navbar />        
       </div> */}
-      <Navbar/>
-      <div className="app-page overflow-y-scroll flex flex-col items-center ">
-        <HeroSection />
-        <div className="w-full sm:w-4/5 bg-gray-100 rounded-2xl p-15">
-          <div className="w-full flex items-center justify-center text-center font-bold text-3xl">
-            <div className="w-4/5 sm:w-1/2 mb-5">
-              Build a career in IT sector in Kolkata, sarting salary of 2-3 LPA
-            </div>
+      <div className='hidden sm:block'>
+        <Navbar />
+      </div>
+      <div className='flex flex-col items-center overflow-y-scroll'>
+        <div className="app-page  flex flex-col items-center w-[95%] sm:w-[85%]  ">
+          <div className='w-full sm:hidden'>
+            <Navbar />
           </div>
-          <UICourseSection />
-        </div>
-        <button className="app-page py-4 px-6 rounded-lg bg-yellow-400 mt-5 font-bold">
-          Download Curriculum
-        </button>
-        <div className="app-page w-7/10 sm:w-[30%] mt-20 text-3xl text-center font-bold ">
-          Meet our Mentors
-        </div>
-        <div className="app-page w-8/10 sm:w-[40%] my-12 text-sm text-center  ">
-          Industry Experts guiding the next generation of innovators. Our team
-          of seasoned professionals brings years of real-world experience,
-          offering invaluable mentorship and insights to help you achieve
-          success in your career.
-        </div>
-        <Carousel />
-        <div className="app-page w-[50%] text-center font-semibold text-2xl my-10">
-          Lancers Students have Cracked their Dream Careers In
-        </div>
-        <div className="app-page h-[400px] w-full my-10">
-          <AutoCarousel />
-        </div>
-        <div className="app-page w-[60%] font-bold text-4xl text-center my-10">
-          Gain the competitive edge with mastery of essential development skills
-        </div>
-        <div className="app-page w-8/10 sm:w-[60%] font-light text-sm my-10">
-          <SkillCards />
-        </div>
-        <div className="w-8/10 sm:w-[30%] font-semibold text-4xl text-center my-10 ">
-          Learn real life UI/UX experience
-        </div>
-        <div className="w-9/10 sm:w-[70%] font-light text-2xl text-center p-5">
-          Learn and grow like you would on a real job. Start from the
-          fundamentals, get support from our mentors and community, and build
-          your way to the top - through professional work-like Full-stack and
-          Backend web development projects.
-        </div>
-        <div className="w-full flex items-center justify-center">
-          <CourseCarousel />
-        </div>
-        <div className="space-y-2 w-8/10 sm:w-3/5 text-5xl font-bold text-center my-10">
-          <div>Personalised Placement Assistance</div>
-          <span className="text-[#0b6b53]">সরাসরি সাক্ষাৎকার কল</span>
-        </div>
-        <div className="w-4/5 font-light text-xl text-center my-10">
-          আমরা আপনাকে বেঙ্গলের শীর্ষ কোম্পানির সাথে সাক্ষাৎকারের সুযোগে সরাসরি
-          প্রবেশাধিকার প্রদান করি, যাতে আপনি আপনার আদর্শ UI/UX ভূমিকার জন্য
-          প্রস্তুত থাকতে পারেন
-        </div>
-        <div className="flex flex-wrap gap-10 justify-center items-center w-4/5">
-          {featureList.map((src, index) => (
-            <div key={index}>
-              <Image alt="" src={src} width={400} height={400} />
-            </div>
-          ))}
-        </div>
-        <button className="rounded-lg bg-amber-300 hover:bg-amber-400 font-bold text-xl py-5 px-10 hover:cursor-pointer mt-10">
-          Try our free demo class
-        </button>
-
-        <div className="w-1/2 font-semibold text-4xl text-center my-20">
-          Program Fee and Scholarship
-        </div>
-
-        <div className="w-9/10 sm:w-6/10  sm:flex items-center justify-center px-10 py-10 sm:py-5 rounded-4xl bg-[#2DF8C5] ">
-          <div className="bg-gray-50 basis-1/3 flex flex-col gap-3 items-start justify-center  rounded-3xl p-16">
-            <div className="bg-amber-200 py-1 px-2 rounded-lg text-lg sm:text-base font-semibold">
-              Only for
-            </div>
-            <div className="">
-              <span className="font-bold text-4xl sm:text-3xl">639</span>
-              <span className="text-[#24b490] font-semibold text-lg sm:text-base">/month</span>
-              <div className="text-base sm:text-sm text-[#24b490]">(for 6 months)</div>
-            </div>
-            <div>*before scholarship</div>
-          </div>
-          <div className="px-2 sm:px-10 py-1.5 sm:py-5 basis-2/3">
-            <div className="p-2">
-              <div className="font-bold"> <Check strokeWidth={3} className='inline' /> Absolutely Free Demo Class</div>
-              <div className="">No fees required</div>
-            </div>
-            <div className="p-2">
-              <div className="font-bold"> <Check strokeWidth={3} className='inline' /> Guaranteed Scholarship</div>
-              <div>After the demo class</div>
-            </div>
-            <div className="p-2">
-              <div className="font-bold">
-                Placement Jogyotar Tarikhe placement pele
+          <HeroSection />
+          <div className="w-full bg-gray-100 rounded-2xl sm:p-15 mt-10">
+            <div className="w-full flex items-center justify-center text-center font-bold text-2xl my-3 sm:text-3xl">
+              <div className="w-full hidden sm:block mb-5">
+                Industry-Ready Curriculum for <br />
+                Kolkata Tech Jobs (Learn modern skills. <br />
+                Build real projects, Get job-ready)
               </div>
-              <div>Sudhumatro sofolotar fee porisodh korun </div>
+              <div className="w-full block sm:hidden my-5 px-2">
+                Industry-Ready Curriculum for
+                Kolkata Tech Jobs (Learn modern skills.
+                Build real projects, Get job-ready)
+              </div>
             </div>
-            <div className="block p-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-              incidunt consequuntur impedit dolor hic officia mollitia quae
-              eligendi perferendis sequi, illum ducimus magnam obcaecati vero
-              facere, iusto odit quisquam voluptates.
+            <UICourseSection />
+          </div>
+          <button className="app-page w-[200px] py-4 px-6 rounded-lg bg-yellow-400 mt-5 font-bold">
+            Download Now
+          </button>
+          <div className="app-page full  mt-20 text-3xl sm:text-4xl text-center font-bold ">
+            Meet our Mentors
+          </div>
+          <div className="app-page w-full  my-8 text-md sm:text-lg text-center leading-6 ">
+            <div className='hidden sm:block'>
+              <b>Industry experts</b> are guiding the next generation of <br /> professionals. Our team of <b>experienced mentors</b> brings years <br /> of real-world experience and provides practical advice, clarity,<br /> and support to help you succeed in your career.
+            </div>
+            <div className='sm:hidden'>
+              <b>Industry experts</b> are guiding the next generation of  professionals. Our team of <b>experienced mentors</b> brings years of real-world experience and provides practical advice, clarity, and support to help you succeed in your career.
+
             </div>
           </div>
-        </div>
-
-        <button className="w- rounded-lg bg-amber-300 hover:bg-amber-400 font-bold text-xl py-5 px-10 hover:cursor-pointer mt-10">
-          Try our free demo class
-        </button>
-
-        <div className="font-bold text-3xl text-center my-10">
-          ১০,০০০+ ডিজাইন উৎসাহীদের সম্প্রদায়ে যোগ দিন
-        </div>
-        <div className="w-9/10 sm:w-6/10 text-center text-lg">
-          <span className="font-bold">সংযোগ করুন, শিখুন এবং বিকশিত হন</span>{' '}
-          একটি প্রাণবন্ত সম্প্রদায়ের সঙ্গে, যেখানে UI/UX ডিজাইনার ও শিল্প
-          পেশাদাররা আমাদের বিস্তৃত প্রশিক্ষণের মাধ্যমে তাদের ক্যারিয়ার
-          রূপান্তরিত করেছেন।
-        </div>
-        <div className="rounded-3xl w-9/10 sm:w-6/10 mt-10 bg-[#2DF8C5] p-10 text-4xl text-center font-bold">
-          Gain the privilage of top UI/UX design experise and achieve creative
-          convinience
-          <div className="space-y-4 sm:space-x-5 mt-5 ">
-            <button className="border-4 font-semibold text-xl px-15 py-3 rounded-lg bg-[#2DF8C5] hover:bg-[#105544] text-[#105544] hover:text-[#2DF8C5] hover:cursor-pointer ">
-              Lorem ipsum dolor sit.
-            </button>
-            <button className="border-4 font-semibold text-xl px-15 py-3 rounded-lg  hover:bg-[#105544] text-[#105544] hover:text-[#2DF8C5] hover:cursor-pointer ">
-              Lorem ipsum dolor sit.
-            </button>
+          <Carousel />
+          <div className="app-page w-full text-center font-semibold text-2xl my-10">
+            Lancers Students have Cracked their Dream Careers In
           </div>
-        </div>
-
-        <AlumniVideoSection />
-
-        {/* <button className="w- rounded-lg bg-amber-300 hover:bg-amber-400 font-bold text-xl py-5 px-10 hover:cursor-pointer mt-10">
-          Try our free demo class
-        </button> */}
-
-        <TryOurFreeDemoClassButton />
-
-        <div className="w-9/10 flex flex-col items-center justify-center my-20">
-          <div className="w-full sm:w-5/10 text-center text-5xl font-bold">
-            প্রায়োগিক ডিজাইন-ভিত্তিক শিক্ষার পদ্ধতি চাহিদাসম্পন্ন UI/UX দক্ষতা
-            আয়ত্ত করতে
+          <div className="app-page w-full my-10 space-y-5">
+            <AutoCarousel direction='left' autoCarouselItems={autoCarouselItemsLeft} />
+            <AutoCarousel direction='right' autoCarouselItems={autoCarouselItemsRight} />
           </div>
-          <div className="w-9/10 flex flex-wrap gap-5 justify-center items-center mt-10">
-            {bottomFeatureList.map((src, index) => (
-              <div key={index}>
-                {/* {src} */}
-                <Image alt="" src={src} height={400} width={400} />
+          <PlacementReport />
+          <div className="app-page w-full font-bold text-4xl text-center my-20">
+            <div>
+              Build Modern Full-Stack Skills with Real- <br />World Projects
+            </div>
+            <div className='text-lg font-light tracking-wide text-gray-400 mt-5'>
+              From React and Node.js to databases and deployment—learn everything needed to ship complete applications like <br /> a professional developer.
+            </div>
+          </div>
+          <div className="app-page w-8/10 sm:w-[80%] font-light text-sm sm:my-10">
+            <SkillCards />
+          </div>
+          <div className="w-8/10 font-semibold text-3xl text-center my-10 ">
+            <div className=' hidden sm:block'>
+              Real-World <br />
+              Full-Stack Development Experience
+            </div>
+            <div className='sm:hidden'>
+              Real-World
+              Full-Stack Development Experience
+            </div>
+          </div>
+          <div className="w-full  text-center p-5">
+            <div className='hidden sm:block'>
+              Our Full-Stack course is designed to give you practical, <b>industry-ready</b> skills. From fundamentals to real <br />
+              projects, you’ll learn by building full applications end-to-end. With <b>expert guidance</b> and continuous support, <br />
+              you’ll create a strong portfolio that prepares you for entry-level Full-Stack Developer roles.
+            </div>
+            <div className='sm:hidden'>
+              Our Full-Stack course is designed to give you practical, <b>industry-ready</b> skills. From fundamentals to real
+              projects, you’ll learn by building full applications end-to-end. With <b>expert guidance</b> and continuous support,
+              you’ll create a strong portfolio that prepares you for entry-level Full-Stack Developer roles.
+            </div>
+          </div>
+          <div className="hidden sm:flex w-full items-center justify-center">
+            <CourseCarousel />
+          </div>
+          <div className=" sm:hidden w-full flex items-center justify-center">
+            <CourseCarousel perView={1} />
+          </div>
+          <TryOurFreeDemoClassButton />
+          <div className="space-y-2 w-full text-3xl font-bold text-center mt-20 mb-8">
+            <div className=''>Personalized Placement <br /> Support — <span className="text-[#378f79]">Direct Interview Calls</span>
+            </div>
+
+          </div>
+          <div className="w-full font-light text-xl text-center mb-10">
+            <div className='hidden sm:block'>
+              We prepare you end-to-end for Full-Stack Developer interviews and connect you with hiring partners so you can <br />
+              confidently start your tech career.
+            </div>
+            <div className='sm:hidden'>
+              We prepare you end-to-end for Full-Stack Developer interviews and connect you with hiring partners so you can
+              confidently start your tech career.
+            </div>
+          </div>
+          <div className="hidden sm:flex flex-wrap gap-5 justify-center items-center w-full space-y-5 sm:space-y-0 ">
+            {topFeatureListDesk.map((src, index) => (
+              <div key={index} className='sm:basis-1/4'>
+                <Image alt="" src={src} width={400} height={400} />
               </div>
             ))}
           </div>
-        </div>
+          <div className="sm:hidden space-y-5 w-full ">
+            {topFeatureListMob.map((src, index) => (
+              <div key={index} className='w-full'>
+                <Image alt="" src={src} width={4000} height={4000} className='w-full h-auto' />
+              </div>
+            ))}
+          </div>
+          <div className='mt-10 w-[300px] text-center rounded-lg bg-yellow-300 shadow-lg font-semibold px-6 py-4'>
+            Book a free demo class
+          </div>
 
-        <TryOurFreeDemoClassButton />
+          <div className=" font-semibold text-3xl text-center mt-20 mb-8">
+            Program Fee and Scholarship
+          </div>
 
-        <div className="w-9/10 sm:w-8/10 text-center my-20 space-y-10 flex flex-col items-center justify-center">
-          <div className="w-full sm:w-7/10  space-y-10">
-            <div className="font-bold text-4xl">
-              বাস্তব অভিজ্ঞতা, বাস্তব ডিজাইন-ভিত্তিক শিক্ষা ল্যান্সার্স
-              অ্যাকাডেমিতে
+          <ProgramFeeAndScholarships />
+
+          <div className='mt-10 w-[300px] text-center rounded-lg bg-yellow-300 shadow-lg font-semibold px-6 py-4'>
+            Book a free demo class
+          </div>
+
+
+          <div className="font-bold text-3xl text-center my-10">
+            Join a Community of 10,000+ Aspiring Developers
+          </div>
+          <div className="w-full sm:w-8/10 text-center text-gray-400 text-lg">
+            <b>Connect, learn, and grow </b>with a supportive community where learners are building real projects, getting mentorship, and starting their tech careers through structured training.
+          </div>
+          <div className="rounded-3xl sm:w-8/10 mt-10 bg-[#2DF8C5] p-8 px-4 sm:px-10 sm:p-10 text-3xl tracking-tight text-center font-bold">
+            <div className='hidden sm:block '>
+              See how lancrs academy can help you start your <br />Full-Stack Career in Kolkata {'\''}s IT companies
+
             </div>
-            <div>
-              UI/UX ডিজাইন আয়ত্ত করার সেরা উপায় হলো আপনার দক্ষতাগুলো বাস্তব
-              সমস্যাগুলো সমাধানে প্রয়োগ করা। ল্যান্সার্স অ্যাকাডেমিতে, আমরা
-              প্রথাগত শিক্ষার সীমা অতিক্রম করে হাতে-কলমে অভিজ্ঞতা প্রদান করি
-              যেখানে প্রকৃত ডিজাইন প্রকল্পগুলি পেশাদার কর্মপরিবেশের অনুরূপ
+            <div className='sm:hidden text-2xl tracking-tighter'>
+              See how lancrs academy can help you start your Full-Stack Career in Kolkata {'\''}s IT companies
+
             </div>
-            <div>
-              তত্ত্ব শেখা বা টিউটোরিয়াল নয়, বাস্তব পণ্য ডিজাইন করবেন একজন
-              পেশাদার ডিজাইনারের মতো
+            <div className="space-y-4 sm:space-x-5 mt-5 ">
+              <button className="border border-black font-semibold text-xl w-full sm:w-fit sm:px-15 py-3 rounded-lg bg-[#2DF8C5] hover:bg-[#105544] text-[#105544] hover:text-[#2DF8C5] hover:cursor-pointer ">
+                View our Placement Report.
+              </button>
+              <button className="border border-black font-semibold text-xl w-full sm:w-fit sm:px-15 py-3 rounded-lg  hover:bg-[#105544] text-[#105544] hover:text-[#2DF8C5] hover:cursor-pointer ">
+                Book a free demo class.
+              </button>
             </div>
           </div>
-          <div className="w-full">
-            <ComparisonTable />
-            <div className="font-light text-sm">
-              শীর্ষ রিক্রুটাররা ডিজাইনার নিয়োগের সময় বাস্তব প্রকল্প অভিজ্ঞতাকে
-              অগ্রাধিকার দেন, আর সেটাই আমরা প্রদান করি। আমাদের প্রোগ্রাম
-              শিক্ষার্থীদের ব্যবহারিক ও বাস্তবভিত্তিক শিক্ষার সুযোগ দেয় এবং
-              প্রতিযোগিতামূলক UI/UX ডিজাইনের জগতে ক্যারিয়ার বৃদ্ধি ও সাফল্যের
-              জন্য প্রয়োজনীয় দক্ষতা প্রদান করে
-            </div>
-          </div>
-        </div>
 
-        <button className=" rounded-lg bg-amber-300 hover:bg-amber-400 font-bold text-xl py-5 px-10 hover:cursor-pointer">
+          <AlumniVideoSection />
+
+          {/* <button className="w- rounded-lg bg-amber-300 hover:bg-amber-400 font-bold text-xl py-5 px-10 hover:cursor-pointer mt-10">
           Try our free demo class
-        </button>
+        </button> */}
 
-        <FAQSection />
-        <Footer />
+          <TryOurFreeDemoClassButton />
+
+          <div className="w-full flex flex-col items-center justify-center my-20">
+            <div className="w-full text-center text-xl sm:text-3xl font-bold">
+              <div className='hidden sm:block'>
+                A Practical, Project-Based Learning <br />
+                Approach to Build In-Demand Full-Stack <br />
+                Skills
+              </div>
+              <div className='block sm:hidden'>
+                A Practical, Project-Based Learning
+                Approach to Build In-Demand Full-Stack
+                Skills
+              </div>
+
+            </div>
+            {/* <div className="w-9/10 sm:grid grid-cols-3 gap-5 justify-center items-center mt-10">
+            {bottomFeatureList.map((src, index) => (
+              <div key={index}>
+                <Image alt="" src={src} height={400} width={400} />
+              </div>
+            ))}
+          </div> */}
+
+          {/* BOTTOM FEATURES */}
+
+            <div className="hidden sm:flex flex-wrap gap-5 justify-center items-center w-full space-y-5 sm:space-y-0 ">
+              {bottomFeatureListDesk.map((src, index) => (
+                <div key={index} className='sm:basis-1/4'>
+                  <Image alt="" src={src} width={400} height={400} />
+                </div>
+              ))}
+            </div>
+            <div className="sm:hidden space-y-5 w-full ">
+              {bottomFeatureListMob.map((src, index) => (
+                <div key={index} className='w-full'>
+                  <Image alt="" src={src} width={4000} height={4000} className='w-full h-auto' />
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+          <TryOurFreeDemoClassButton />
+
+          <div className="w-10/10 text-center my-20 space-y-10 flex flex-col items-center justify-center">
+            <div className="w-full  space-y-8">
+              <div className="font-bold text-3xl">
+                <div className='sm:block hidden'>
+                  Real Experience, Real Project-Based <br />
+                  Learning at Lancrs Academy
+                </div>
+                <div className='sm:hidden'>
+                  Real Experience, Real <br /> Project-Based <br />
+                  Learning at Lancrs <br /> Academy
+                </div>
+              </div>
+              <div className='sm:block hidden'>
+                The best way to become job-ready in Full-Stack  Development is to apply your skills to <br />
+                real problems. At Lancrs Academy, we go beyond theory and tutorials—our program is <br />
+                built around hands-on projects that simulate real company work.
+              </div>
+              <div className='sm:hidden px-3'>
+                The best way to become job-ready in Full-Stack  Development is to apply your skills to
+                real problems. At Lancrs Academy, we go beyond theory and tutorials—our program is
+                built around hands-on projects that simulate real company work.
+              </div>
+              <div className='px-3'>
+                You won’t just watch videos—you’ll build complete applications end-to-end like a <br /> professional developer.
+              </div>
+            </div>
+            <div className="w-full">
+              <ComparisonTable />
+              <div className="font-light tracking-wide text-gray-700">
+                <div className='sm:block hidden'>
+                  Top companies shortlist candidates who can prove real project experience—and that’s exactly what we help you build. Our <br /> program focuses on practical learning, strong portfolio projects, and interview readiness to help you start your Full-Stack <br /> career confidently.
+
+                </div>
+                <div className='sm:hidden px-3'>
+                  Top companies shortlist candidates who can prove real project experience—and that’s exactly what we help you build. Our <br /> program focuses on practical learning, strong portfolio projects, and interview readiness to help you start your Full-Stack <br /> career confidently.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button className=" rounded-lg bg-amber-300 hover:bg-amber-400 font-bold text-xl py-5 px-10 hover:cursor-pointer">
+            Try our free demo class
+          </button>
+
+          <FAQSection />
+        </div>
+          <Footer />
       </div>
+
     </div>
   );
 }

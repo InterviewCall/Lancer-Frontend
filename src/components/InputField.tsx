@@ -14,13 +14,13 @@ export default function InputField({
     formState: { errors },
   } = useFormContext();
   return (
-    <div className="component-inputField w-full py-2 rounded-md">
-      <div className="component-inputField flex items-center bg-white rounded-lg px-4 py-2 shadow-sm">
+    <div className="component-inputField w-full py-1 rounded-xl ">
+      <div className="component-inputField flex items-center bg-white  px-6 py-2 shadow-sm rounded-2xl">
         <input
           {...register(fieldName)}
           type="text"
           placeholder={placeholder}
-          className="component-inputField flex-1 outline-none border-none bg-transparent text-gray-700 placeholder-gray-400"
+          className="component-inputField flex-1 outline-none border-none bg-transparent text-gray-700 placeholder-gray-400 h-12 rounded-2xl"
         />
         {icon}
       </div>

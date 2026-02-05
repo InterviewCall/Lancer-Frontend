@@ -27,7 +27,7 @@ export default function HeroSectionForm() {
     console.log(data);
   };
   return (
-    <div className="component-landingPage-HeroSectionForm w-9/10 h-full shadow-2xl items-center justify-center flex flex-col bg-teal-50 p-5 rounded-2xl">
+    <div className="component-landingPage-HeroSectionForm w-full sm:w-9/10 h-full shadow-2xl items-center justify-center flex flex-col bg-teal-50 p-5 rounded-2xl">
       <FormProvider {...methods}>
         <form onSubmit={handleSubmit(submitFn)} className='w-full'>
           <InputField
@@ -51,11 +51,12 @@ export default function HeroSectionForm() {
             fieldName="phone"
           />
           < input
+            className='mt-6'
             type="checkbox"
             {...methods.register('newsLetter')}/> 
-            <span className='m-3 text-xs text-gray-400'>আমি এই নম্বরে SMS এবং WhatsApp যোগাযোগ গ্রহণ করতে সম্মত আছি</span>
-          <button type="submit" className="component-landingPage-HeroSectionForm mt-2 p-2 w-full rounded-md bg-yellow-400 hover:cursor-pointer hover:bg-yellow-500 font-bold">
-            Book your trial
+            <span className='m-3 text-xs text-gray-400 '>I agree to receive communication via SMS and WhatsApp.</span>
+          <button type="submit" className="component-landingPage-HeroSectionForm mt-2 p-2 w-full  bg-yellow-300 hover:cursor-pointer hover:bg-yellow-500 font-bold rounded-xl">
+            Book a free demo class
           </button>
         </form>
       </FormProvider>
