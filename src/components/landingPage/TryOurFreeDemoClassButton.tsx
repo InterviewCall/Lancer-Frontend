@@ -1,7 +1,7 @@
 export default function TryOurFreeDemoClassButton() {
     return (
-        <button className=" rounded-lg bg-amber-300 hover:bg-amber-400 font-bold text-xl py-5 px-10 hover:cursor-pointer mt-10">
-          Try our free demo class
-        </button>
+        <div className='mt-10 w-[300px] text-center rounded-lg bg-yellow-300 hover:cursor-pointer shadow-lg font-semibold px-6 py-4'>
+            Book a free demo class
+          </div>
     );
 }

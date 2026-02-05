@@ -24,7 +24,7 @@ export default function PlacementReport() {
                         subHeading: 'average salary hike',
                     },
                 ].map((item, index) => (
-                    <div key={index} className="w-[150px] bg-teal-50 sm:w-full">
+                    <div key={index} className="w-[150px] rounded-2xl bg-teal-50 sm:w-full">
                         <div className='p-5 text-center border-r last:border-0'>
                             <div className='font-bold text-2xl'>{item.heading}</div>
                             <div className='text-gray-600'>{item.subHeading}</div>

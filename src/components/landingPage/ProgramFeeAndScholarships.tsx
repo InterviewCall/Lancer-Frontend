@@ -5,7 +5,7 @@ export default function ProgramFeeAndScholarships() {
         <div className="w-full sm:w-8/10 sm:flex items-center justify-center px-4 sm:px-10 py-8 rounded-4xl bg-[#2DF8C5]">
 
             {/* Left pricing card */}
-            <div className="bg-gray-50 basis-1/3 mx-2 sm:mx-0 flex flex-col gap-3 items-start justify-center rounded-3xl p-10">
+            <div className="bg-gray-50 basis-1/3 mx-2 sm:mx-0 flex flex-col gap-3 items-center sm:items-start justify-center rounded-3xl p-10">
                 <div className="bg-amber-200 py-1 px-3 rounded-lg text-lg sm:text-base font-semibold">
                     EMI Starting From
                 </div>

@@ -83,7 +83,7 @@ const mentorCarouselContent = [
   {
     id: 7,
     name: 'Maria Shah',
-    description: ['Software Engineer @Walmart India'],
+    description: ['Certified NLP Trainer', 'Ex-Trainer @ICICI Bank', 'Ex-Trainer @Kotak Bank' ,'15 years of experience'],
     src: '/mentors/profile/mentor7-profile.svg',
     companySrcArray: [
       '/mentors/companies/icici.svg',

@@ -5,17 +5,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-const courseCarousel = [
-  {
-    id: 1,
-    src: '/courses/MyFitnessPalDemo.png',
-  },
-  { id: 2, src: '/courses/BehanceDemo.png' },
-  { id: 3, src: '/courses/FlipboardDemo.png' },
-  { id: 4, src: '/courses/AmazonDemo.png' },
-  { id: 5, src: '/courses/AirbnbDemo.png' },
-  { id: 5, src: '/courses/InstagramDemo.png' },
-];
+import { projectCarousel } from '../utils';
+
 
 export default function CourseCarousel({ perView = 3 }: { perView?: number }) {
   const middleOffset = Math.floor(perView / 2);
@@ -57,7 +48,7 @@ export default function CourseCarousel({ perView = 3 }: { perView?: number }) {
           ref={sliderRef}
           className="flex keen-slider rounded-lg overflow-hidden"
         >
-          {courseCarousel.map((content, idx) => (
+          {projectCarousel.map((content, idx) => (
             <div
               key={idx}
               className="keen-slider__slide flex justify-center items-center"

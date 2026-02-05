@@ -38,9 +38,9 @@ export default function Navbar() {
           <Image
             alt="Lancers"
             src={'/lancersFullLogo.png'}
-            width={0}
-            height={0}
-            className='h-16 w-auto'
+            width={1000}
+            height={1000}
+            className='h-10 sm:h-12 w-auto'
           />
         </div>
         <div>
@@ -65,15 +65,15 @@ export default function Navbar() {
         
       </div>
       <div
-        className={`sm:hidden border rounded-2xl border-gray-300 transition-all duration-300 overflow-hidden ${
-          isOpen ? ' opacity-100' : 'max-h-0 opacity-0'
+        className={`sm:hidden border rounded-2xl border-gray-300  transition-[max-height,opacity] duration-300 ease-out overflow-hidden ${
+          isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="flex flex-col bg-gray-50">
           {navbarButtonList.map((button) => (
             <NavbarButton key={button.id} buttonName={button.name} />
           ))}
-          <button className='mx-6 sm:hidden rounded-md px-6 py-1.5 font-bold border '>
+          <button className='mx-6 text-lg mt-2 sm:hidden rounded-md px-6 py-1.5 font-bold border hover:cursor-pointer '>
               Talk With counsellor
             </button>
         </div>
